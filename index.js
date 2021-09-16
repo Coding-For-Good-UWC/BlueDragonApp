@@ -1,19 +1,13 @@
-const app = require('fastify')({ logger: true })
-const path = require('path')
+const express = require('express')
+const app = express()
+const port = 3000
 
-app.register(require('fastify-static'), {
-  root: path.join(__dirname, 'public'),
-  prefix: '/public/', // optional: default '/'
+app.use(express.static('public'))
+
+app.get('/', (req, res) => {
+  res.sendFile('public/index.html')
 })
 
-app.get('/', function (req, reply) {
-  return reply.sendFile('index.html') // serving path.join(__dirname, 'public', 'myHtml.html') directly
-})
-
-
-app.listen(3000, (err, address) => {
-  if (err) {
-    app.log.error(err)
-    process.exit(1)
-  }
+app.listen(port, () => {
+  console.log(`Server launched on localhost:${port}`)
 })
