@@ -1,0 +1,24 @@
+{
+  "name": "bluedragonapp",
+  "version": "1.0.0",
+  "description": "An app for the Blue Dragon GC",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx nodemon"
+  },
+  "keywords": [
+    "BlueDragon",
+    "App",
+    "Help"
+  ],
+  "author": "Aditya AGRAWAL",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.21.1",
+    "fastify-nextjs": "^6.0.0",
+    "fastify-static": "^4.2.3",
+    "nodemon": "^2.0.12",
+    "react": "^17.0.2",
+    "react-native": "^0.65.1"
+  }
+}
