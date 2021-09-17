@@ -1,3 +1,7 @@
+#Expo
+.expo
+.expo-shared
+
 # Logs
 logs
 *.log
