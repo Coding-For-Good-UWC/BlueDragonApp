@@ -1,13 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
+
+import LanguageSelect from './pages/LanguageSelect';
+import HomePage from './pages/HomePage';
 
 export default function App() {
   const [firstLaunch, setFirstLaunch ] = useState(false);
   useEffect(() => {
-	console.log("._.")
 	const asyncCheck = async () => { 
 		await AsyncStorage.getItem("firstLaunch").then((value) => { 
 			if (value == null) {
@@ -23,17 +24,11 @@ export default function App() {
   
   if (firstLaunch) {
     return (
-      <View style={styles.container}>
-        <Text>First Launch!</Text>
-        <StatusBar style="auto" />
-      </View>
+      <LanguageSelect></LanguageSelect>
     )
   } else {
     return (
-      <View style={styles.container}>
-        <Text>Welcome Back</Text>
-        <StatusBar style="auto" />
-      </View>
+      <HomePage></HomePage>	    
     )
   }
 }
@@ -44,5 +39,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-});
+  }
+})
