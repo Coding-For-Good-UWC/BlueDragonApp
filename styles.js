@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
 		marginLeft: 25,
 		marginBottom: 20,
 		textAlign: 'left',
-		fontSize: 28,
+		fontSize: 36,
 		width: '50%',
 		fontWeight: '700'
 	},
@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		fontSize: 18,
 		color: 'white'
-	}, 
+	},
 	buttonContainer: {
                 shadowColor: "#000",
                 shadowOffset: {
@@ -26,28 +26,18 @@ export const styles = StyleSheet.create({
 		width: 275,
 		height: 75,	
 		borderRadius: 15,
-		margin: 10,
+		margin: 5,
 		backgroundColor: "#6ECFEA",
 		justifyContent: 'center',
 		color: 'black'
 	},
 	selectedButtonContainer: {
-                shadowColor: "#000",
-                shadowOffset: {
-                        width: 0,
-                        height: 4,
-                },
-                shadowOpacity: 0.30,
-                shadowRadius: 4.65,
-                elevation: 8,
-                width: 275,
-                height: 75,
-                borderRadius: 15,
-                margin: 10,
                 backgroundColor: "#305A66",
-                justifyContent: 'center',
 		color: 'white'
         },
+	thinButton: {
+		height:45
+	},
 	mainContainer: {
 		flex: 1,
 		alignItems: 'center',
@@ -62,6 +52,10 @@ export const styles = StyleSheet.create({
 		alignItems: 'flex-start',
 		marginBottom: 25
 	},
+	bottomRoundedBox: {
+		borderBottomRightRadius: 25,
+		borderBottomLeftRadius: 25,
+	},
 	icon: {
 		marginTop: 50,
 		marginHorizontal: 20
@@ -71,6 +65,9 @@ export const styles = StyleSheet.create({
 		width: '100%',
 		alignItems: 'center',
 		justifyContent: 'space-evenly'
+	},
+	thinContainer: {
+		justifyContent: 'center'
 	},
 	unsafeBlueFill: {
 		width: '100%',

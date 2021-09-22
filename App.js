@@ -7,7 +7,7 @@ import LanguageSelect from './pages/LanguageSelect';
 import HomePage from './pages/HomePage';
 
 export default function App() {
-  const [firstLaunch, setFirstLaunch ] = useState(false);
+  const [ firstLaunch, setFirstLaunch ] = useState(false);
   useEffect(() => {
 	const asyncCheck = async () => { 
 		await AsyncStorage.getItem("firstLaunch").then((value) => { 

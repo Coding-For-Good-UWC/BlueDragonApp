@@ -6,54 +6,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function HomePage() {
-	const [lang, setLang] = useState(0);
-	
-	if (lang) {
-                return (
-                        <View>
-                                <View style={styles.unsafeBlueFill}/>
-                                <SafeAreaView style={styles.mainContainer}>
-                                        <View style={styles.roundedBox}>
-                                                <Pressable onPress={() => console.log("test")}>
-                                                        <FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={36}/>
-                                                </Pressable>
-                                                <Text style={styles.title}>Select a Language</Text>
-                                        </View>
-                                        <View style={styles.container}>
-                                                <Pressable style={(lang==1)?styles.selectedButtonContainer:styles.buttonContainer} onPress={() => setLang(1)}>
-                                                        <Text style={styles.buttonText}>English</Text>
-                                                </Pressable>
-                                                <Pressable style={(lang==1)?styles.buttonContainer:styles.selectedButtonContainer} onPress={() => setLang(2)}>
-                                                        <Text style={styles.buttonText}>Tiếng Việt</Text>
-                                                </Pressable>
-						<Pressable style={styles.buttonContainer}>
-							<Text style={styles.buttonText}>Next</Text>
-						</Pressable>
-                                        </View>
-                                </SafeAreaView>
-                        </View>
-                )	
-	} else {
-		return (
-			<View>
-				<View style={styles.unsafeBlueFill}/>
-				<SafeAreaView style={styles.mainContainer}>
-					<View style={styles.roundedBox}>
-						<Pressable onPress={() => console.log("test")}>
-							<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={36}/>
-						</Pressable>
-						<Text style={styles.title}>Select a Language</Text>
-					</View>
-					<View style={styles.container}>
-						<Pressable style={styles.buttonContainer} onPress={() => setLang(1)}>
-							<Text style={styles.buttonText}>English</Text>
-						</Pressable>
-						<Pressable style={styles.buttonContainer} onPress={() => setLang(2)}>
-							<Text style={styles.buttonText}>Tiếng Việt</Text>
-						</Pressable>
-					</View>
-				</SafeAreaView>
-			</View>
-		)
-	}
+	return (
+		<View>
+			<View style={styles.unsafeBlueFill}/>
+			<SafeAreaView style={styles.mainContainer}>
+				<View style={[styles.roundedBox, styles.bottomRoundedBox]}>
+					<Text style={styles.title}>Blue Dragon</Text>
+				</View>
+				<View style={[styles.container, styles.thinContainer]}>
+					<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => console.log("human trafficking")}>
+						<Text style={styles.buttonText}>Human Trafficking</Text>
+					</Pressable>
+                                        <Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => console.log("staying safe")}>
+                                                <Text style={styles.buttonText}>Staying Safe</Text>
+                                        </Pressable>
+                                        <Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => console.log("finding help")}>
+                                                <Text style={styles.buttonText}>Finding Help</Text>
+                                        </Pressable>
+				</View>
+			</SafeAreaView>
+		</View>
+	)
 }
