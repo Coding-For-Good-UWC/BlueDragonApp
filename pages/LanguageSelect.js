@@ -1,20 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from '../styles'
 export default function LanguageSelect() {
 	return (
-	      <View style={styles.container}>
+	      <View style={styles.mainContainer}>
         	<Text>Language Select</Text>
       	      </View>
 	)
 }
-const styles = StyleSheet.create({
-	button: {
-		
-	},
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	}
-})

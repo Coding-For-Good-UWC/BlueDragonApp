@@ -13,7 +13,7 @@ export default function App() {
 		await AsyncStorage.getItem("firstLaunch").then((value) => { 
 			if (value == null) {
 				setFirstLaunch(true)
-	  			AsyncStorage.setItem("firstLaunch", false)
+	  			AsyncStorage.setItem("firstLaunch", "0")
 			} else {
 				setFirstLaunch(false)
 			}
