@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
 	buttonText: {
 		textAlign: 'center',
 		fontWeight: 'bold',
-		fontSize: 18
+		fontSize: 18,
+		color: 'white'
 	}, 
 	buttonContainer: {
                 shadowColor: "#000",
@@ -66,7 +67,7 @@ export const styles = StyleSheet.create({
 		marginHorizontal: 20
 	},
 	container: {
-		height: '150%',
+		height: 450,
 		width: '100%',
 		alignItems: 'center',
 		justifyContent: 'space-evenly'
