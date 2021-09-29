@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
 	title: {
-		marginLeft: 25,
-		marginBottom: 20,
+		marginLeft: 35,
+		marginBottom: 45,
+		marginTop: 50,
 		textAlign: 'left',
-		fontSize: 36,
+		fontSize: 40,
 		width: '50%',
 		fontWeight: '700'
 	},
@@ -45,7 +46,7 @@ export const styles = StyleSheet.create({
 	},
 	roundedBox: {
 		width: '100%',
-		height: 200,
+		height: 225,
 		borderBottomRightRadius: 100,
 		backgroundColor: "#6ECFEA",
 		justifyContent: 'space-around',
@@ -61,10 +62,12 @@ export const styles = StyleSheet.create({
 		marginHorizontal: 20
 	},
 	container: {
-		height: 450,
+		height: 250,
 		width: '100%',
 		alignItems: 'center',
-		justifyContent: 'space-evenly'
+		justifyContent: 'space-evenly',
+		marginBottom: 75,
+		marginTop: 40
 	},
 	thinContainer: {
 		justifyContent: 'center'

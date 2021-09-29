@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import { Text, View, SafeAreaView, Pressable } from 'react-native'
 import { styles } from '../styles'
 
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
-
-export default function HomePage() {
+export default function HomePage({ navTo }) {
 	return (
 		<View>
 			<View style={styles.unsafeBlueFill}/>
@@ -14,13 +11,13 @@ export default function HomePage() {
 					<Text style={styles.title}>Blue Dragon</Text>
 				</View>
 				<View style={[styles.container, styles.thinContainer]}>
-					<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => console.log("human trafficking")}>
+					<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navTo("traffick")}>
 						<Text style={styles.buttonText}>Human Trafficking</Text>
 					</Pressable>
-                                        <Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => console.log("staying safe")}>
+                                        <Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navTo("safety")}>
                                                 <Text style={styles.buttonText}>Staying Safe</Text>
                                         </Pressable>
-                                        <Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => console.log("finding help")}>
+                                        <Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navTo("findHelp")}>
                                                 <Text style={styles.buttonText}>Finding Help</Text>
                                         </Pressable>
 				</View>

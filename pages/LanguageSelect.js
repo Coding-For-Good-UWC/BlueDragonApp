@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Text, View, SafeAreaView, Pressable } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { styles } from '../styles'
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
-export default function HomePage() {
+export default function LanguageSelect({ navTo }) {
 	const [lang, setLang] = useState(0);
 	
 	if (lang) {
@@ -15,7 +16,7 @@ export default function HomePage() {
                                 <SafeAreaView style={styles.mainContainer}>
                                         <View style={styles.roundedBox}>
                                                 <Pressable onPress={() => console.log("go back")}>
-                                                        <FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={36}/>
+                                                        <FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
                                                 </Pressable>
                                                 <Text style={styles.title}>Select a Language</Text>
                                         </View>
@@ -26,10 +27,13 @@ export default function HomePage() {
                                                 <Pressable style={(lang==1)?styles.buttonContainer:[styles.buttonContainer, styles.selectedButtonContainer]} onPress={() => setLang(2)}>
                                                         <Text style={styles.buttonText}>Tiếng Việt</Text>
                                                 </Pressable>
-						<Pressable style={styles.buttonContainer} onPress={() => console.log("switch to homepage")}>
-							<Text style={styles.buttonText}>Next</Text>
-						</Pressable>
                                         </View>
+					<Pressable style={styles.buttonContainer} onPress={() => {
+						AsyncStorage.setItem("lang", lang.toString())
+						navTo("home")
+					}}>
+						<Text style={styles.buttonText}>Next</Text>
+					</Pressable>
                                 </SafeAreaView>
                         </View>
                 )	
@@ -40,7 +44,7 @@ export default function HomePage() {
 				<SafeAreaView style={styles.mainContainer}>
 					<View style={styles.roundedBox}>
 						<Pressable onPress={() => console.log("test")}>
-							<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={36}/>
+							<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 						</Pressable>
 						<Text style={styles.title}>Select a Language</Text>
 					</View>
