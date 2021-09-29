@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import LanguageSelect from './pages/LanguageSelect'
 import HomePage from './pages/HomePage'
 import ListPage from './pages/ListPage'
+import TextPage from './pages/TextPage'
 export default function App() {
   const [ nav, setNav ] = useState("lang")
   useEffect(() => {
@@ -40,14 +41,9 @@ export default function App() {
 	return (
 	        <ListPage navTo={setNav} content="help"></ListPage>
 	)
+    case "traffick1":
+	return (
+		<TextPage navTo={setNav} content="traffick1"></TextPage>
+	)
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-})
