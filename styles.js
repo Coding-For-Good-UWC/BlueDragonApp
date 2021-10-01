@@ -86,7 +86,7 @@ export const styles = StyleSheet.create({
 	},
 	contentsBody: {
                 width: '100%',
-		height: 600,
+		height: 800,
                 borderTopRightRadius: 55,
 		borderTopLeftRadius: 55,
                 backgroundColor: "#6ECFEA",
