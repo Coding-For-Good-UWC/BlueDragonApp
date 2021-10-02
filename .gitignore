@@ -1,6 +1,6 @@
 .DS_Store
 .*.swp
-
+.*.swo
 #Expo
 .expo
 .expo-shared
