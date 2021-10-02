@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Text, View, SafeAreaView, Pressable } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+
 import { styles } from '../styles'
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
@@ -28,8 +29,8 @@ export default function LanguageSelect({ navTo }) {
                                                         <Text style={styles.buttonText}>Tiếng Việt</Text>
                                                 </Pressable>
                                         </View>
-					<Pressable style={styles.buttonContainer} onPress={() => {
-						AsyncStorage.setItem("lang", lang.toString())
+					<Pressable style={styles.buttonContainer} onPress={async () => {
+						await AsyncStorage.setItem("lang", lang.toString())
 						navTo("home")
 					}}>
 						<Text style={styles.buttonText}>Next</Text>

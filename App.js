@@ -6,15 +6,14 @@ import LanguageSelect from './pages/LanguageSelect'
 import HomePage from './pages/HomePage'
 import ListPage from './pages/ListPage'
 import TextPage from './pages/TextPage'
+
 export default function App() {
   const [ nav, setNav ] = useState("lang")
   useEffect(() => {
 	const asyncCheck = async () => { 
-		await AsyncStorage.getItem("firstLaunch").then((value) => { 
-			if (value == null) {
-	  			AsyncStorage.setItem("firstLaunch", "0")
-			} else {
-				setNav("lang")
+		await AsyncStorage.getItem("lang").then((value) => { 
+			if (value != null) {
+				setNav("home")
 			}
 		})
 	}
