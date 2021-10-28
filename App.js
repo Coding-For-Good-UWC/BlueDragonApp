@@ -28,7 +28,7 @@ export default function App() {
   return (
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName={startScreen} screenOptions={{ headerShown: false }}>
-				<Stack.Screen name="lang" component={LanguageSelect} initialParams={{ Language: lang }}/>
+				<Stack.Screen name="lang" component={LanguageSelect}/>
 				<Stack.Screen name="home" component={HomePage} initialParams={{ Language: lang }}/>
 				<Stack.Screen name="listPage" component={ListPage} initialParams={{ Language: lang }}/>
 				<Stack.Screen name="textPage" component={TextPage} initialParams={{ Language: lang }}/>

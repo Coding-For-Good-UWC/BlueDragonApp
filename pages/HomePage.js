@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Text, View, SafeAreaView, Pressable } from 'react-native'
+
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import { styles } from '../styles'
 import Loading from './Loading'
+
+import HomeSvg from '../static/homePage.js'
 
 export default function HomePage({ route, navigation }) {
 	switch(route.params.Language){
@@ -14,9 +17,10 @@ export default function HomePage({ route, navigation }) {
 					<SafeAreaView style={styles.mainContainer}>
 						<View style={[styles.roundedBox, styles.bottomRoundedBox]}>
 							<Text style={styles.title}>Blue Dragon</Text>
+							<HomeSvg width={250} height={250}/>
 						</View>
 						<View style={[styles.container, styles.thinContainer]}>
-							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navigation.navigate("listPage", { content: "traffick"})}>
+							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navigation.navigate("listPage", { Language: route.params.Language, content: "traffick"})}>
 								<Text style={styles.buttonText}>Human Trafficking</Text>
 							</Pressable>
 							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navigation.navigate("listPage", { content: "safe"})}>
