@@ -1,48 +1,38 @@
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import LanguageSelect from './pages/LanguageSelect'
 import HomePage from './pages/HomePage'
 import ListPage from './pages/ListPage'
 import TextPage from './pages/TextPage'
 
+const Stack = createNativeStackNavigator()
+
 export default function App() {
-  const [ nav, setNav ] = useState("lang")
+  var startScreen = "lang"
+  var lang = "1"
   useEffect(() => {
 	const asyncCheck = async () => { 
 		await AsyncStorage.getItem("lang").then((value) => { 
 			if (value != null) {
-				setNav("home")
+				startScreen = "home"
+				lang = value
 			}
 		})
 	}
 	asyncCheck()
   }, [])
-  switch(nav){
-    case "lang":
-	return (
-		<LanguageSelect navTo={setNav}></LanguageSelect>
+  return (
+		<NavigationContainer>
+			<Stack.Navigator initialRouteName={startScreen} screenOptions={{ headerShown: false }}>
+				<Stack.Screen name="lang" component={LanguageSelect} initialParams={{ Language: lang }}/>
+				<Stack.Screen name="home" component={HomePage} initialParams={{ Language: lang }}/>
+				<Stack.Screen name="listPage" component={ListPage} initialParams={{ Language: lang }}/>
+				<Stack.Screen name="textPage" component={TextPage} initialParams={{ Language: lang }}/>
+			</Stack.Navigator>
+		</NavigationContainer>
 	)
-    case "home": 
-	return (
-		<HomePage navTo={setNav}></HomePage>	    
-	)
-    case "traffick":
-	return (
-                <ListPage navTo={setNav} content="traffick"></ListPage>
-	)
-    case "safety":
-	return (
-		<ListPage navTo={setNav} content="safety"></ListPage>
-	)
-    case "findHelp":
-	return (
-	        <ListPage navTo={setNav} content="help"></ListPage>
-	)
-    case "traffick1":
-	return (
-		<TextPage navTo={setNav} content="traffick1"></TextPage>
-	)
-  }
 }

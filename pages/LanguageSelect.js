@@ -7,7 +7,7 @@ import { styles } from '../styles'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
-export default function LanguageSelect({ navTo }) {
+export default function LanguageSelect({ navigation }) {
 	const [lang, setLang] = useState(0);
 	
 	if (lang) {
@@ -31,7 +31,7 @@ export default function LanguageSelect({ navTo }) {
                                         </View>
 					<Pressable style={styles.buttonContainer} onPress={async () => {
 						await AsyncStorage.setItem("lang", lang.toString())
-						navTo("home")
+						navigation.navigate("home", { Language: lang.toString() })
 					}}>
 						<Text style={styles.buttonText}>Next</Text>
 					</Pressable>

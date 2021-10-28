@@ -6,7 +6,17 @@ import { styles } from '../styles'
 import Loading from './Loading'
 
 export default function HomePage({ route, navigation }) {
-	switch(route.params.Language){
+	[lang, setLang] = useState(0)
+        useEffect(() => {
+		const asyncCheck = async () => {
+			await AsyncStorage.getItem("lang").then((value) => {
+				setLang(value)
+			})
+		}
+		asyncCheck()
+  	}, [])
+	
+	switch(route.lang){
 		case "1":
 			return (
 				<View>
@@ -19,10 +29,10 @@ export default function HomePage({ route, navigation }) {
 							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navigation.navigate("listPage", { content: "traffick"})}>
 								<Text style={styles.buttonText}>Human Trafficking</Text>
 							</Pressable>
-							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navigation.navigate("listPage", { content: "safe"})}>
+							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navTo("safety")}>
 								<Text style={styles.buttonText}>Staying Safe</Text>
 							</Pressable>
-							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navigation.navigate("listPage", { content: "help"})}>
+							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navTo("findHelp")}>
 								<Text style={styles.buttonText}>Finding Help</Text>
 							</Pressable>
 						</View>
