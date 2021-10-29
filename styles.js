@@ -115,5 +115,8 @@ export const styles = StyleSheet.create({
 	},
 	contentHeader: {
 		marginTop:0
+	},
+	svg: {
+		alignSelf: "flex-end"
 	}
 })

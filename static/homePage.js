@@ -5,8 +5,8 @@ import Svg, { G, Path, Defs, ClipPath } from "react-native-svg"
 function SvgComponent(props) {
   return (
     <Svg
-      width={165}
-      height={153}
+      width="27.5%"
+      height="25.5%"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

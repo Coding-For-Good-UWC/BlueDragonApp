@@ -17,7 +17,7 @@ export default function HomePage({ route, navigation }) {
 					<SafeAreaView style={styles.mainContainer}>
 						<View style={[styles.roundedBox, styles.bottomRoundedBox]}>
 							<Text style={styles.title}>Blue Dragon</Text>
-							<HomeSvg width={250} height={250}/>
+							<HomeSvg width={250} height={250} style={styles.svg}/>
 						</View>
 						<View style={[styles.container, styles.thinContainer]}>
 							<Pressable style={[styles.buttonContainer, styles.thinButton]} onPress={() => navigation.navigate("listPage", { Language: route.params.Language, content: "traffick"})}>
