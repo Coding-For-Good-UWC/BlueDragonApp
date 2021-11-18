@@ -8,6 +8,7 @@ import LanguageSelect from './pages/LanguageSelect'
 import HomePage from './pages/HomePage'
 import ListPage from './pages/ListPage'
 import TextPage from './pages/TextPage'
+import TestVid from './pages/TestVid'
 
 const Stack = createNativeStackNavigator()
 
@@ -32,6 +33,7 @@ export default function App() {
 				<Stack.Screen name="home" component={HomePage} initialParams={{ Language: lang }}/>
 				<Stack.Screen name="listPage" component={ListPage} initialParams={{ Language: lang }}/>
 				<Stack.Screen name="textPage" component={TextPage} initialParams={{ Language: lang }}/>
+				<Stack.Screen name="vidTest" component={TestVid} initialParams={{ Language: lang}}/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	)

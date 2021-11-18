@@ -43,7 +43,48 @@ export default function ListPage({ route, navigation }) {
 							</SafeAreaView>
 						</View>
 					)
-
+				case "safe":
+					return (
+						<View>
+							<SafeAreaView style={styles.mainContainer}>
+								<View style={styles.contentsHeader}>
+									<Pressable onPress={() => navigation.navigate("home")}>
+										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
+									</Pressable>
+									<Text style={styles.title}>Staying Safe</Text>
+								</View>
+								<View style={styles.contentsBody}>
+									<Text style={[styles.title, styles.contentTitle]}>Table Of Contents</Text>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "safe1" })}>
+										<Text style={styles.contentLink}>Avoid Being Trafficked</Text>
+									</Pressable>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "safe2" })}>
+										<Text style={styles.contentLink}>Staying Safe While Being Trafficked</Text>
+									</Pressable>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "safe3" })}>
+										<Text style={styles.contentLink}>Reporting a Trafficking Case</Text>
+									</Pressable>
+								</View>
+							</SafeAreaView>
+						</View>
+					)
+				case "help":
+					return (
+						<View>
+							<SafeAreaView style={styles.mainContainer}>
+								<View style={styles.contentsHeader}>
+									<Pressable onPress={() => navigation.navigate("home")}>
+										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
+									</Pressable>
+									<Text style={styles.title}>Finding Help</Text>
+								</View>
+								<View style={styles.contentsBody}>
+									<Text style={[styles.title, styles.contentTitle, styles.contentHeader]}>Hotlines & Service Addresses</Text>
+									<Text style={styles.contentText}>Lorem Ipsum</Text>
+								</View>
+							</SafeAreaView>
+						</View>
+					)
 			}
 		case "2":
 			switch (route.params.content){
@@ -52,33 +93,74 @@ export default function ListPage({ route, navigation }) {
 						<View>
 							<SafeAreaView style={styles.mainContainer}>
 								<View style={styles.contentsHeader}>
-									<Pressable onPress={() => navTo("home")}>
+									<Pressable onPress={() => navigation.navigate("home")}>
 										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 									</Pressable>
-									<Text style={styles.title}>Human Trafficking: Vietnamese Version</Text>
+									<Text style={styles.title}>Human Trafficking Viet</Text>
 								</View>
 								<View style={styles.contentsBody}>
 									<Text style={[styles.title, styles.contentTitle]}>Table Of Contents</Text>
-								        <Pressable onPress={() => navigation.navigate("listText", { content: "traffick1" })}>
-                                                                                <Text style={styles.contentLink}>Definition</Text>
-                                                                        </Pressable>
-                                                                        <Pressable onPress={() => navigation.navigate("listText", { content: "traffick2" })}>
-                                                                                <Text style={styles.contentLink}>The Victims</Text>
-                                                                        </Pressable>
-                                                                        <Pressable onPress={() => navigation.navigate("listText", { content: "traffick3" })}>
-                                                                                <Text style={styles.contentLink}>Consequences of Trafficking</Text>
-                                                                        </Pressable>
-                                                                        <Pressable onPress={() => navigation.navigate("listText", { content: "traffick4" })}>
-                                                                                <Text style={styles.contentLink}>Who are the Traffickers?</Text>
-                                                                        </Pressable>
-                                                                        <Pressable onPress={() => navigation.navigate("listText", { content: "traffick5" })}>
-                                                                                <Text style={styles.contentLink}>Consequences for the Traffickers</Text>
-                                                                        </Pressable>	
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "traffick1" })}>
+										<Text style={styles.contentLink}>Definition</Text>
+									</Pressable>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "traffick2" })}>
+										<Text style={styles.contentLink}>The Victims</Text>
+									</Pressable>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "traffick3" })}>
+										<Text style={styles.contentLink}>Consequences of Trafficking</Text>
+									</Pressable>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "traffick4" })}>
+										<Text style={styles.contentLink}>Who are the Traffickers?</Text>
+									</Pressable>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "traffick5" })}>
+										<Text style={styles.contentLink}>Consequences for the Traffickers</Text>
+									</Pressable>
 								</View>
 							</SafeAreaView>
 						</View>
 					)
-
-        	}        
+				case "safe":
+					return (
+						<View>
+							<SafeAreaView style={styles.mainContainer}>
+								<View style={styles.contentsHeader}>
+									<Pressable onPress={() => navigation.navigate("home")}>
+										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
+									</Pressable>
+									<Text style={styles.title}>Staying Safe</Text>
+								</View>
+								<View style={styles.contentsBody}>
+									<Text style={[styles.title, styles.contentTitle]}>Table Of Contents</Text>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "safe1" })}>
+										<Text style={styles.contentLink}>Avoid Being Trafficked</Text>
+									</Pressable>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "safe2" })}>
+										<Text style={styles.contentLink}>Staying Safe While Being Trafficked</Text>
+									</Pressable>
+									<Pressable onPress={() => navigation.navigate("textPage", { content: "safe3" })}>
+										<Text style={styles.contentLink}>Reporting a Trafficking Case</Text>
+									</Pressable>
+								</View>
+							</SafeAreaView>
+						</View>
+					)
+				case "help":
+					return (
+						<View>
+							<SafeAreaView style={styles.mainContainer}>
+								<View style={styles.contentsHeader}>
+									<Pressable onPress={() => navigation.navigate("home")}>
+										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
+									</Pressable>
+									<Text style={styles.title}>Finding Help Viet</Text>
+								</View>
+								<View style={styles.contentsBody}>
+									<Text style={[styles.title, styles.contentTitle, styles.contentHeader]}>Hotlines & Service Addresses</Text>
+									<Text style={styles.contentText}>Lorem Ipsum</Text>
+								</View>
+							</SafeAreaView>
+						</View>
+					)
+			}        
 	} 
 }

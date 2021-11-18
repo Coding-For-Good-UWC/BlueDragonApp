@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function LanguageSelect({ navigation }) {
-	const [lang, setLang] = useState(0);
+	const [lang, setLang] = useState(0)
 	
 	if (lang) {
                 return (
@@ -16,7 +16,7 @@ export default function LanguageSelect({ navigation }) {
                                 <View style={styles.unsafeBlueFill}/>
                                 <SafeAreaView style={styles.mainContainer}>
                                         <View style={styles.roundedBox}>
-                                                <Pressable onPress={() => console.log("go back")}>
+                                                <Pressable>
                                                         <FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
                                                 </Pressable>
                                                 <Text style={styles.title}>Select a Language</Text>
@@ -44,7 +44,7 @@ export default function LanguageSelect({ navigation }) {
 				<View style={styles.unsafeBlueFill}/>
 				<SafeAreaView style={styles.mainContainer}>
 					<View style={styles.roundedBox}>
-						<Pressable onPress={() => console.log("test")}>
+						<Pressable> 
 							<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 						</Pressable>
 						<Text style={styles.title}>Select a Language</Text>
