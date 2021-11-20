@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
 		color: 'white'
 	},
 	buttonContainer: {
-                shadowColor: "#000",
+                shadowColor: '#000',
                 shadowOffset: {
                         width: 0,
                         height: 4,
@@ -28,12 +28,12 @@ export const styles = StyleSheet.create({
 		height: 75,	
 		borderRadius: 15,
 		margin: 5,
-		backgroundColor: "#6ECFEA",
+		backgroundColor: '#6ECFEA',
 		justifyContent: 'center',
 		color: 'black'
 	},
 	selectedButtonContainer: {
-                backgroundColor: "#305A66",
+                backgroundColor: '#305A66',
 		color: 'white'
         },
 	thinButton: {
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
 		width: '100%',
 		height: 225,
 		borderBottomRightRadius: 100,
-		backgroundColor: "#6ECFEA",
+		backgroundColor: '#6ECFEA',
 		justifyContent: 'space-around',
 		alignItems: 'flex-start',
 		marginBottom: 25
@@ -75,7 +75,7 @@ export const styles = StyleSheet.create({
 	unsafeBlueFill: {
 		width: '100%',
 		height: '25%',
-		backgroundColor: "#6ECFEA",
+		backgroundColor: '#6ECFEA',
 	},
 	contentsHeader: {
 	        width: '100%',
@@ -89,7 +89,7 @@ export const styles = StyleSheet.create({
 		height: 800,
                 borderTopRightRadius: 55,
 		borderTopLeftRadius: 55,
-                backgroundColor: "#6ECFEA",
+                backgroundColor: '#6ECFEA',
                 justifyContent: 'flex-start',
                 alignItems: 'flex-start',
                 marginBottom: 25
@@ -117,6 +117,14 @@ export const styles = StyleSheet.create({
 		marginTop:0
 	},
 	svg: {
-		alignSelf: "flex-end"
-	}
+		alignSelf: 'flex-end'
+	},
+	video: {
+		marginTop: 100,
+		borderRadius: 15,
+		width: 300,
+		height: 300,
+		//marginTop: 500,
+		alignSelf: 'center'
+	},
 })
