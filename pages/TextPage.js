@@ -181,7 +181,7 @@ export default function TextPage({ route, navigation }) {
 									<Pressable onPress={() => navigation.navigate("home", {Language: route.params.Language})}>
 										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 									</Pressable>
-									<Text style={styles.title}>Human Trafficking 1v</Text>
+									<Text style={styles.title}>Human Trafficking1v</Text>
 								</View>
 								<View style={styles.contentsBody}>
 									<Pressable onPress={() => navigation.navigate("listPage", {Language: route.params.Language, content: "traffick"})}>
@@ -201,7 +201,7 @@ export default function TextPage({ route, navigation }) {
 									<Pressable onPress={() => navigation.navigate("home", {Language: route.params.Language})}>
 										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 									</Pressable>
-									<Text style={styles.title}>Human Trafficking 2v</Text>
+									<Text style={styles.title}>Human Trafficking2v</Text>
 								</View>
 								<View style={styles.contentsBody}>
 									<Pressable onPress={() => navigation.navigate("listPage", {Language: route.params.Language, content: "traffick"})}>
@@ -221,7 +221,7 @@ export default function TextPage({ route, navigation }) {
 									<Pressable onPress={() => navigation.navigate("home", {Language: route.params.Language})}>
 										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 									</Pressable>
-									<Text style={styles.title}>Human Trafficking 3v</Text>
+									<Text style={styles.title}>Human Trafficking3v</Text>
 								</View>
 								<View style={styles.contentsBody}>
 									<Pressable onPress={() => navigation.navigate("listPage", {Language: route.params.Language, content: "traffick"})}>
@@ -241,7 +241,7 @@ export default function TextPage({ route, navigation }) {
 									<Pressable onPress={() => navigation.navigate("home", {Language: route.params.Language})}>
 										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 									</Pressable>
-									<Text style={styles.title}>Human Trafficking 4v</Text>
+									<Text style={styles.title}>Human Trafficking4v</Text>
 								</View>
 								<View style={styles.contentsBody}>
 									<Pressable onPress={() => navigation.navigate("listPage", {Language: route.params.Language, content: "traffick"})}>
@@ -261,7 +261,7 @@ export default function TextPage({ route, navigation }) {
 									<Pressable onPress={() => navigation.navigate("home", {Language: route.params.Language})}>
 										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 									</Pressable>
-									<Text style={styles.title}>Human Trafficking 5v</Text>
+									<Text style={styles.title}>Human Trafficking5v</Text>
 								</View>
 								<View style={styles.contentsBody}>
 									<Pressable onPress={() => navigation.navigate("listPage", {Language: route.params.Language, content: "traffick"})}>
