@@ -3,10 +3,10 @@ export const styles = StyleSheet.create({
 	title: {
 		marginLeft: 35,
 		marginBottom: 55,
-		marginTop: 50,
+		marginTop: 65,
 		textAlign: 'left',
 		fontSize: 40,
-		width: '50%',
+		width: '60%',
 		fontWeight: '700'
 	},
 	buttonText: {
