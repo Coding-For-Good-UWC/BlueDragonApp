@@ -33,7 +33,7 @@ export default function TestVid({ route, navigation }) {
 			Video and Audio
 		</Text>
                 <Video
-                source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+                source={{ uri: 'https://cdn.discordapp.com/attachments/887979497129918464/913327600053665812/videoplayback.mp4' }}
                 rate={1.0}
                 volume={1.0}
                 isMuted={false}

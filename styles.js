@@ -111,10 +111,12 @@ export const styles = StyleSheet.create({
 	contentText: {
 		fontSize: 20,
 		marginLeft: 25,
+		marginRight: 25,
 		marginTop: 0
 	},
 	contentHeader: {
-		marginTop:0
+		marginTop:0,
+		marginBottom: 30
 	},
 	svg: {
 		alignSelf: 'flex-end'
@@ -127,4 +129,10 @@ export const styles = StyleSheet.create({
 		//marginTop: 500,
 		alignSelf: 'center'
 	},
+	subContentHeader: {
+		textAlign: 'left',
+		marginLeft: 25,
+		fontSize: 26,
+		marginTop: 15
+	}
 })

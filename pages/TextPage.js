@@ -25,7 +25,7 @@ export default function TextPage({ route, navigation }) {
 										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 									</Pressable>
 									<Text style={[styles.title, styles.contentTitle, styles.contentHeader]}>Definition</Text>
-									<Text style={styles.contentText}>Lorem Ipsum</Text>
+									<Text style={styles.contentText}>Human Trafficking is when men, women, or children are decieved, coerced or sold, domestically and abroad, into “slave-like” situations contrary to their desires, including sexual exploitation, forced labor, forced marriage, and other inhumane purposes.</Text>
 								</View>
 							</SafeAreaView>
 						</View>
@@ -44,8 +44,9 @@ export default function TextPage({ route, navigation }) {
 									<Pressable onPress={() => navigation.navigate("listPage", {Language: route.params.Language, content: "traffick"})}>
 										<FontAwesomeIcon icon={ faAngleLeft } style={styles.icon} size={42}/>
 									</Pressable>
-									<Text style={[styles.title, styles.contentTitle, styles.contentHeader]}>Definition</Text>
-									<Text style={styles.contentText}>Lorem Ipsum</Text>
+									<Text style={[styles.title, styles.contentTitle, styles.contentHeader]}>The Victims</Text>
+									<Text style={[styles.title, styles.contentTitle, styles.subContentHeader]}>Personal Risk Factors</Text>
+									<Text style={styles.contentText}>	-Gender{"\n"}	-Age{"\n"} -Ethnic Minority{"\n"}</Text>
 								</View>
 							</SafeAreaView>
 						</View>
